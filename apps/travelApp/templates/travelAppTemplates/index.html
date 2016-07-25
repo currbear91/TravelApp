@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Welcome to Traveler!</title>
+	{% load staticfiles %}
+	<link rel="stylesheet" href="{% static 'travelAppCSS/bootstrap.css' %}" media="screen" title="no title"  charset="utf-8">
+	<link rel="stylesheet" href="{% static 'travelAppCSS/style.css' %}" media="screen" title="no title"  charset="utf-8">
+</head>
+<body>
+
+	<div id = 'container'>
+		<div class='homeimage'>
+		{% load staticfiles %}
+			<img class="img-responsive homepage" src="{% static 'travelAppIMG/seattle_home.jpg' %}" alt="Chania" width="">
+		
+			<div class= 'here'>
+				<h1>Welcome!</h1>
+				<form action="/dashboard">
+					<table>
+						<tr>
+							<th>Username:</th>
+							<th>Password:</th>
+							<th></th>
+						</tr>
+						<tr>
+							<td><input class="form-control input-sm" type="text" name="username" placeholder="Username"></td>
+							<td><input class="form-control input-sm" type="text" name="password" placeholder="Password"></td>
+							<td><input class = 'btn btn-primary homebtn' type="submit" name="enter" value="Log In"></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td class = 'nonuser'>Not a user? <a href="/register">Sign Up Here!</a></td>
+						</tr>
+					</table>
+					
+				</form>
+			</div>
+		</div>	
+	</div>
+
+</body>
+</html>

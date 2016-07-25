@@ -1,0 +1,60 @@
+body{
+	background-color: whitesmoke;
+	text-align: center;
+	margin: 0 auto;
+	font-family: 'didot'
+}
+
+table, th, td{
+	text-align: left; 
+	margin: auto;
+
+
+}
+
+	.nonuser{
+		font-size: .6em;
+		text-align: right;
+
+	}
+
+	
+
+#container{
+	display: block;
+	
+	margin: 0 auto;
+		
+
+}
+.homepage{
+
+	opacity: .7;
+	display: block;
+	margin: 0 auto;
+}
+
+.here{
+
+	position: fixed;
+	/*display: block;*/
+	margin-top: -600px;
+	/*margin-left: 400px;*/
+	
+	background: rgba(245, 245, 245, .5);
+	border-top: 3px solid black;
+	border-bottom: 3px solid black;
+	width: 1200px;
+	/*margin-left: 350px;*/
+	padding-bottom: 20px;
+	opacity: .9;
+}
+
+
+
+.homebtn{
+	line-height: 15px; 
+	border-color: whitesmoke;
+	background-color: silver;
+	
+}
