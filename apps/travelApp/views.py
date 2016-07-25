@@ -8,4 +8,4 @@ def index(request):
 
 def register(request):
 
-	return render(request, 'travelAppTemplates/register.html')
+	return render(request, 'travelAppTemplates/registration.html')

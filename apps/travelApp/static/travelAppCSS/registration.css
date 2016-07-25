@@ -1,0 +1,65 @@
+*{
+	font-family: 'didot';
+}
+
+body{
+	text-align: center;
+	/*background-color: whitesmoke;*/
+	padding-top: 0px;
+	text-align: center;
+
+}
+
+
+form{
+	display: inline-block;
+	margin-left: 50px;
+	margin-top: 20px;
+}
+
+th, td{
+	font-family: sans-serif;
+	font-weight: lighter;
+	font-size: .8em;
+	text-align: left;
+	padding: 5px;
+}
+
+ul{
+	margin-right: 50px;
+	margin-top: 10px;
+}
+
+
+#logocontainer{
+	width: 100px;
+	height: 100px;
+	display: inline-block;
+	margin-left: 0px;
+}
+
+
+#header{
+
+}
+	.logo{
+
+		
+		height:100%;
+	}
+
+.input-sm{
+	height: 20px;
+	width: 100px;
+}
+
+.btn{
+	line-height: 5px;
+	background-color: silver;
+	border: transparent;
+	align-self: right;
+	position: absolute;
+
+}
+
+

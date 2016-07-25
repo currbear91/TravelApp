@@ -4,13 +4,45 @@
 	<title>Welcome to Traveler!</title>
 	{% load staticfiles %}
 	<link rel="stylesheet" href="{% static 'travelAppCSS/bootstrap.css' %}" media="screen" title="no title"  charset="utf-8">
-	<link rel="stylesheet" href="{% static 'travelAppCSS/style.css' %}" media="screen" title="no title"  charset="utf-8">
+	<link rel="stylesheet" href="{% static 'travelAppCSS/registration.css' %}" media="screen" title="no title"  charset="utf-8">
 </head>
 <body>
 
 	<div id = 'container'>
 		<div class = 'register'>
-			
+			<form action="/process" method="POST">
+				{% csrf_token %}
+					<table>
+						<tr>
+							<td><label>First Name:</label></td>
+							<td><input class='input-sm' type="text" name="first_name" placeholder="First Name"></td>
+						</tr>
+						<tr>
+							<td><label>Last Name:</label></td>
+							<td><input class='input-sm' type="text" name="last_name" placeholder="Last Name"></td>
+						</tr>
+						<tr>
+							<td><label>Email Address:</label></td>
+							<td><input class='input-sm' type="email" name="email" placeholder="Email"></td>
+						</tr>
+						<tr>
+							<td><label>Username:</label></td>
+							<td><input class='input-sm' type="text" name="username" placeholder="Username"></td>
+						</tr>
+						<tr>
+							<td><label>Password:</label></td>
+							<td><input class='input-sm' type="password" name="password" placeholder="Password"></td>
+						</tr>
+						<tr>
+							<td><label>Confirm Password:</label></td>
+							<td><input class='input-sm' type="password" name="confirm" placeholder="Confirm"></td>
+						</tr>
+						<tr>
+							<td><label><input class = 'btn btn-primary' type="submit" name="submit" value="Create Account"></label></td>
+						</tr>
+						<hr>
+					</table>	
+				</form>	
 		</div>	
 	</div>
 
