@@ -4,12 +4,13 @@
 	<title></title>
 </head>
 <body>
-<h4> Welcome </h4>
+<h4> Welcome,  {{ request.session.username }}! </h4>
+	<p><a href = "{% url 'my_travel_logout' %}"> Logout</a></p>
 
 	<!--menu bar -->
-	<a href = "{% url 'my_travel_home' %}"> Home</a>
-	<a href = "{% url 'my_travel_destination' %}"> Destination</a>
-	<a href = "{% url 'my_travel_profile' %}"> Profile</a>
+	<a href = "{% url 'my_travel_home' %}"> Home</a> | <a href = "{% url 'my_travel_destination' %}"> Destination</a> | <a href = "{% url 'my_travel_profile' %}"> Profile</a>
+
+
 
 
 

@@ -1,31 +1,45 @@
 from django.shortcuts import render, redirect
-# from .models import User
+from .models import User, UserManager
 from django.contrib  import messages
 import datetime
-# from ..examApp.models import TravelManager, UTravel, OTravel
 from django.core.urlresolvers import reverse
-def register(request):
-	# if User.userManager.isValidReg(request.POST,request):
-	# 	passflag = True
-	# 	return redirect(reverse('my_travel_index'))
 
-	# else:
-	# 	passflag = False
-		# return redirect(reverse('my_travel_index'))
+####################################################
 
-	return render(request, 'travelAppTemplates/home.html')
+# PROCESSING DATA 
 
-def login(request):
-	if User.userManager.login(request.POST, request):
-		passflag=True
+####################################################
+
+def processregister(request):
+	results = User.userManager.isValidReg(request.POST)
+	errors = results[1]
+	for error in errors:
+		messages.error(request, error)
+
+	if results[0]:
+		return redirect(reverse('my_travel_index'))
+	else: 
+		return redirect(reverse('my_travel_register'))
+
+def processlogin(request):
+	results = User.userManager.validlog(request.POST)
+	print request.POST['username']
+	if results[0]:
+		print "************************************************"
+		request.session['id'] = results[1].id
+		print request.session['id']
+		request.session['username'] = results[1].username
+		print request.session['username']
 		return redirect(reverse('my_travel_home'))
 	else: 
-		passflag = False
+		errors = results[1]
+		for error in errors:
+			messages.warning(request, error)
 		return redirect(reverse('my_travel_index'))
 
-def process(request):
 
-	pass
+
+
 
 ####################################################
 
@@ -42,6 +56,9 @@ def adminform(request):
 def home(request):
 	return render(request, 'travelAppTemplates/home.html')
 
+def register(request):
+	return render(request, 'travelAppTemplates/registration.html')
+
 def userProfile(request):
 	return render(request, 'travelAppTemplates/userProfile.html')
 
@@ -53,5 +70,9 @@ def finderResults(request):
 
 def destinationResults(request):
 	return render(request, 'travelAppTemplates/destinationResults.html')
+
  
+def logout(request):
+	request.session.clear()
+	return redirect(reverse('my_travel_index'))
 
