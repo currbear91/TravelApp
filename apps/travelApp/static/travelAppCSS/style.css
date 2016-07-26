@@ -29,7 +29,7 @@ table, th, td{
 }
 .homepage{
 
-	opacity: .7;
+	opacity: .8;
 	display: block;
 	margin: 0 auto;
 }
@@ -39,15 +39,15 @@ table, th, td{
 	position: fixed;
 	/*display: block;*/
 	margin-top: -600px;
-	/*margin-left: 400px;*/
 	
 	background: rgba(245, 245, 245, .5);
 	border-top: 3px solid black;
 	border-bottom: 3px solid black;
-	width: 1200px;
+	width: 100%;
 	/*margin-left: 350px;*/
 	padding-bottom: 20px;
 	opacity: .9;
+
 }
 
 

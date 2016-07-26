@@ -9,3 +9,12 @@ def index(request):
 def register(request):
 
 	return render(request, 'travelAppTemplates/registration.html')
+
+def process(request):
+
+	pass
+
+def login(request):
+
+	pass
+ 

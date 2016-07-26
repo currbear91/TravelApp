@@ -9,9 +9,14 @@
 <body>
 
 	<div id = 'container'>
-		<div class = 'register'>
-			<form action="/process" method="POST">
-				{% csrf_token %}
+		<div class = 'homepage'>
+			<img class="img-responsive homepage" src="{% static 'travelAppIMG/seattle_home.jpg' %}" alt="Chania" width="">
+				<div class = 'registrationheader'>
+					<h1>Register With Travel</h1>
+				</div>
+			<div class = 'here'>
+				<form action="/process" method="POST">
+					{% csrf_token %}
 					<table>
 						<tr>
 							<td><label>First Name:</label></td>
@@ -42,7 +47,8 @@
 						</tr>
 						<hr>
 					</table>	
-				</form>	
+				<form>	
+			</div>
 		</div>	
 	</div>
 

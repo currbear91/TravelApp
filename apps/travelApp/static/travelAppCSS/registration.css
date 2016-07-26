@@ -13,40 +13,11 @@ body{
 
 form{
 	display: inline-block;
-	margin-left: 50px;
+	/*margin-left: 50px;*/
 	margin-top: 20px;
 }
 
-th, td{
-	font-family: sans-serif;
-	font-weight: lighter;
-	font-size: .8em;
-	text-align: left;
-	padding: 5px;
-}
 
-ul{
-	margin-right: 50px;
-	margin-top: 10px;
-}
-
-
-#logocontainer{
-	width: 100px;
-	height: 100px;
-	display: inline-block;
-	margin-left: 0px;
-}
-
-
-#header{
-
-}
-	.logo{
-
-		
-		height:100%;
-	}
 
 .input-sm{
 	height: 20px;
@@ -60,6 +31,74 @@ ul{
 	align-self: right;
 	position: absolute;
 
+}
+
+table, th, td{
+	text-align: left; 
+	margin: auto;
+
+
+}
+	td{
+		font-size: 1.2em;
+	}
+
+
+#container{
+	display: block;
+	
+	margin: 0 auto;
+		
+
+}
+.homepage{
+
+	opacity: .9;
+	display: block;
+	margin: 0 auto;
+}
+
+.here{
+
+	position: fixed;
+	/*display: block;*/
+	margin-top: -600px;
+	
+	background: rgba(245, 245, 245, .5);
+	border-top: 3px solid black;
+	border-bottom: 3px solid black;
+	width: 100%;
+	/*margin-left: 350px;*/
+	padding-bottom: 20px;
+	opacity: .9;
+
+}
+
+.registrationheader h1{
+
+	position: fixed;
+	/*display: block;*/
+	margin-top: -675px;
+	font-size: 3em;
+	font-weight: bolder;
+	
+	/*background: rgba(245, 245, 245, .5);*/
+	/*border-top: 3px solid black;*/
+	
+	width: 100%;
+	/*margin-left: 350px;*/
+	padding-bottom: 20px;
+	opacity: .9;
+
+}
+
+
+.btn{
+	line-height: 15px; 
+	border-color: whitesmoke;
+	background-color: silver;
+	margin-left: 125px;
+	
 }
 
 
