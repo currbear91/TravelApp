@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'outrun_futurebold_italic';
+    src: url('outrun-webfont.woff2') format('woff2'),
+         url('outrun-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
