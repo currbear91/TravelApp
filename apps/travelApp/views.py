@@ -1,8 +1,9 @@
 from django.shortcuts import render, redirect
-from .models import User, UserManager
+from .models import User, UserManager, Place, Season, Activity
 from django.contrib  import messages
 import datetime
 from django.core.urlresolvers import reverse
+
 
 ####################################################
 
@@ -43,6 +44,7 @@ def processlogin(request):
 
 
 
+
 ####################################################
 
 # DISPLAY PAGES SECTION  
@@ -56,7 +58,28 @@ def index(request):
 	return render(request, 'travelAppTemplates/index.html')
 
 def adminform(request):
+	print("*"*10)
+	fall = Season.objects.get(name = 'fall')
+	print request.POST['location']
+	print fall.name
+	place = Place.objects.create(title = request.POST['location'])
+	place.season.add(fall)
+	spring = Season.objects.get(name = 'spring')
+	place.season.add(spring)
+	print spring.name
+	summer = Season.objects.get(name = 'summer')
+	place.season.add(summer)
+	winter = Season.objects.get(name = 'winter')
+	place.season.add(winter)
+	print Place.objects.all()
+	return redirect(reverse('my_admin_page'))
+
+def adminpage(request):
 	return render(request, 'travelAppTemplates/admin.html')
+
+
+def adminp(request):
+	return render(request, 'travelAppTemplates/adminindex.html')
 
 def home(request):
 
