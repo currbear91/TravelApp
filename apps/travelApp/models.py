@@ -57,10 +57,6 @@ class UserManager(models.Manager):
 			return [passflag, errors]
 		return [passflag, guy]
 
-
-
-
-
 class User(models.Model):
 	first_name = models.CharField(max_length = 255)
 	last_name = models.CharField(max_length = 255)
@@ -68,8 +64,45 @@ class User(models.Model):
 	email = models.EmailField()
 	password = models.CharField(max_length=255)
 	created_at = models.DateField(auto_now_add = True)
-	updated_at = models.DateField(auto_now_add = True)
+	updated_at = models.DateField(auto_now = True)
 	userManager = UserManager()
 	objects = models.Manager()
+
+
+class Season(models.Model):
+	name = models.CharField(max_length = 50)
+	created_at = models.DateField(auto_now_add = True)
+	updated_at = models.DateField(auto_now = True)
+
+class Activity(models.Model):
+	activity = models.CharField(max_length = 100)
+	created_at = models.DateField(auto_now_add = True)
+	updated_at = models.DateField(auto_now = True)
+
+class Place(models.Model):
+	title = models.CharField(max_length = 100)
+	image = models.ImageField(upload_to = "media")
+	created_at = models.DateField(auto_now_add = True)
+	updated_at = models.DateField(auto_now = True)
+	season = models.ManyToManyField(Season)
+	activity = models.ManyToManyField(Activity)
+	objects = models.Manager()
+
+
+
+
+
+for item in ('winter', 'summer', 'fall', 'spring'):
+	if not Season.objects.filter(name = item):
+		Season.objects.create(name = item)
+
+
+
+
+
+
+
+
+
 
 

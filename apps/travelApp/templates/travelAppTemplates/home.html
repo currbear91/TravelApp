@@ -7,6 +7,24 @@
 <h4> Welcome,  {{ request.session.username }}! </h4>
 	<p><a href = "{% url 'my_travel_logout' %}"> Logout</a></p>
 
+	<h1> choose your adventure </h1>
+	<p> I am interested in <select>
+	<option> list of activities </option>
+	</select> </p>
+	<p> In  <select>
+	<option> list of regions </option>
+	</select></p>
+	<p> during 
+
+	<select> 
+	<option> Spring </option>
+	<option> Summer </option>
+	<option> Fall </option>
+	<option> Winter </option>
+	<option> Any </option>
+	</select></p>
+
+
 	<!--menu bar -->
 	<a href = "{% url 'my_travel_home' %}"> Home</a> | <a href = "{% url 'my_travel_destination' %}"> Destination</a> | <a href = "{% url 'my_travel_profile' %}"> Profile</a>
 

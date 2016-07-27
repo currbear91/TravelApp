@@ -1,14 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>admin</title>
 </head>
 <body>
 	<h3> This is the admin page </h3>
-	<form action ="{% url 'my_admin_form' %}" method = 'post'>
+	<form action ="{% url 'my_admin_form' %}" enctype="multipart/form-data" method = 'POST'>
 	{% csrf_token %}
-		<p> Title: <input type='text' name='title'></p>
-		<p> Upload Picture:  <input type="file" name="pic" accept="image/*"></p>
+		<p> Title: <input type='text' name='location'></p>
+		<p> Season: </p>
+		<input type="checkbox" name='season' value="fall">Fall
+		<input type="checkbox" name='season' value="winter">Winter
+		<input type="checkbox" name='season' value="spring">Spring
+		<input type="checkbox" name='season' value="summer">Summer
+		<p> Activites: </p>
+		<input type="checkbox" name='activity' value="hiking">Hiking
+		<input type="checkbox" name='activity' value="swimming">swimming
+		<input type="checkbox" name='activity' value="skiing">skiing
+		<input type="checkbox" name='activity' value="museums">museums
+		<input type="checkbox" name='activity' value="eating">eating
+		<input type="checkbox" name='activity' value="beach">Beach
+		<input type="checkbox" name='activity' value="climbing">climbing
+		<input type="checkbox" name='activity' value="family">family
+		<input type="checkbox" name='activity' value="shopping">shopping
+		<p> Upload Picture:  
+
+		<input type="file" name="img" ></p>
+
+
 		<p> <input type='submit' value='submit'></p>
 	</form>
 
