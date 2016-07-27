@@ -68,8 +68,31 @@ class User(models.Model):
 	email = models.EmailField()
 	password = models.CharField(max_length=255)
 	created_at = models.DateField(auto_now_add = True)
-	updated_at = models.DateField(auto_now_add = True)
+	updated_at = models.DateField(auto_now = True)
 	userManager = UserManager()
 	objects = models.Manager()
+
+class Activity(models.Model):
+	hiking = models.CharField(max_length = 255)
+	climbing = models.CharField(max_length = 255)
+	beach = models.CharField(max_length = 255)
+
+class Place(models.Model):
+	location = models.CharField(max_length=255)
+	image = models.ImageField(null = True, upload_to = "media/TravelApp")
+	created_at = models.DateField(auto_now_add = True)
+	updated_at = models.DateField(auto_now = True)
+	travellers = models.ManyToManyField(User)
+	activities = models.ManyToManyField(Activity)
+
+
+
+class Season(models.Model):
+	name = models.CharField(max_length=50)
+	created_at = models.DateField(auto_now_add=True)
+	updated_at = models.DateField(auto_now=True)
+	objects = models.Manager()
+
+
 
 

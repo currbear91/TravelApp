@@ -59,6 +59,8 @@ def adminform(request):
 	return render(request, 'travelAppTemplates/admin.html')
 
 def home(request):
+
+
 	return render(request, 'travelAppTemplates/home.html')
 
 def register(request):
@@ -78,6 +80,6 @@ def destinationResults(request):
 
  
 def logout(request):
-	request.session.clear()
-	return redirect(reverse('my_travel_index'))
+		request.session.clear()
+		return redirect(reverse('my_travel_index'))
 

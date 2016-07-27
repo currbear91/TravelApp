@@ -3,28 +3,66 @@
 <head>
 	<title>Travel Dashboard</title>
 	{% load staticfiles %}
-<!-- 	<link rel="stylesheet" href="{% static 'travelAppCSS/bootstrap.css' %}" media="screen" title="no title"  charset="utf-8">
- -->	<link rel="stylesheet" href="{% static 'travelAppCSS/materialize.css' %}" media="screen" title="no title"  charset="utf-8">
+	<link rel="stylesheet" href="{% static 'travelAppCSS/bootstrap.css' %}" media="screen" title="no title"  charset="utf-8">
+	<link rel="stylesheet" href="{% static 'travelAppCSS/materialize.css' %}" media="screen" title="no title"  charset="utf-8">
 	<link rel="stylesheet" href="{% static 'travelAppCSS/home.css' %}" media="screen" title="no title"  charset="utf-8">
-	
+
 </head>
-<body>
-	<div id='headerlogo'>
-		<span class = 'header center-align'>Pacific NW</span>
+	<body>
+		<div id='container'>
 		
-	</div>
-	<nav>
-	    <div class="nav-wrapper">
-	      <a href = "{% url 'my_travel_home' %}"> Home</a>
-	      <ul id="nav-mobile" class="right hide-on-med-and-down">
-	        <li><a href = "{% url 'my_travel_logout' %}"> Logout</a></li>
-	      </ul>
-	    </div>
-  	</nav>
-	<div id = 'welcome'>
-		<h4 id = 'header' class = 'left-align'> <strong>Welcome,<strong> {{ request.session.first_name }}! </h4>
-	</div>
-	<
+			<div id='headerlogo'>
+				<span class = 'header center-align'>Pacific NW</span>
+				
+			</div>
+			<nav>
+			    <div class="nav-wrapper">
+			      <a href = "{% url 'my_travel_home' %}"> Travler</a>
+			      <ul id="nav" class="right">
+			        <li><a href = "{% url 'my_travel_logout' %}"> Logout</a></li>
+			      </ul>
+			    </div>
+		  	</nav>
+			<h4 id = 'header' class = 'left-align'> Welcome,{{ request.session.first_name }}! </h4>
+			<div id = 'welcome' class = 'input-field'>
+				<table>
+					<tr>
+						<td class='boldtd'>Choose Your Adventure:</td>
+						<td><select class = 'browser-default input-sm '>
+								<option>Rock Climbing</option>
+								<option>Hiking</option>
+								<option>Camping</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td class='boldtd'>In:</td>
+						<td><select class = 'browser-default input-sm'>
+								<option>Seattle</option>
+								<option>Portland</option>
+								<option>Forks</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td class='boldtd'>During</td>
+						<td><select class = 'form-control input-sm'>
+								<option>Spring</option>
+								<option>Summer</option>
+								<option>Fall</option>
+								<option>Winter</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td><input class = 'btn btn-default' type="submit" name="submit_trip" value="Find Your Adventure"></td>
+					</tr>
+
+				</table>	
+			</div>
+
+		</div>
 
 
 
@@ -40,5 +78,5 @@
 
 
 
-</body>
+	</body>
 </html>

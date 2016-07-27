@@ -110,4 +110,12 @@ table, th, td{
 	
 }
 
+ul{
+	margin-top: 25px;
+	list-style: none;
+}
+
+li{
+	font-weight: bolder;
+}
 
