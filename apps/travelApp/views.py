@@ -26,11 +26,13 @@ def processlogin(request):
 	results = User.userManager.validlog(request.POST)
 	print request.POST['username']
 	if results[0]:
-		print "************************************************"
+	
 		request.session['id'] = results[1].id
-		print request.session['id']
+		
 		request.session['username'] = results[1].username
-		print request.session['username']
+
+		request.session['first_name'] = results[1].first_name
+
 		return redirect(reverse('my_travel_home'))
 	else: 
 		errors = results[1]
@@ -50,6 +52,9 @@ def processlogin(request):
 ####################################################
 
 def index(request):
+	# if request.session['id']:
+	# 	return redirect(reverse('my_travel_home'))
+	# else:
 	return render(request, 'travelAppTemplates/index.html')
 
 def adminform(request):

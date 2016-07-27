@@ -8,7 +8,9 @@ body{
 table, th, td{
 	text-align: left; 
 	margin: auto;
-
+	font-size: 1.2em;
+	font-weight: bolder;
+	
 
 }
 
@@ -38,7 +40,7 @@ table, th, td{
 
 	position: fixed;
 	/*display: block;*/
-	margin-top: -600px;
+	margin-top: -700px;
 	
 	background: rgba(245, 245, 245, .5);
 	border-top: 3px solid black;

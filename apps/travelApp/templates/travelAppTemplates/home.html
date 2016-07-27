@@ -1,12 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Travel Dashboard</title>
+	{% load staticfiles %}
+<!-- 	<link rel="stylesheet" href="{% static 'travelAppCSS/bootstrap.css' %}" media="screen" title="no title"  charset="utf-8">
+ -->	<link rel="stylesheet" href="{% static 'travelAppCSS/materialize.css' %}" media="screen" title="no title"  charset="utf-8">
+	<link rel="stylesheet" href="{% static 'travelAppCSS/home.css' %}" media="screen" title="no title"  charset="utf-8">
+	
 </head>
 <body>
-<h4> Welcome,  {{ request.session.username }}! </h4>
-	<p><a href = "{% url 'my_travel_logout' %}"> Logout</a></p>
+	<div id='headerlogo'>
+		<span class = 'header center-align'>Pacific NW</span>
+		
+	</div>
+	<nav>
+	    <div class="nav-wrapper">
+	      <a href = "{% url 'my_travel_home' %}"> Home</a>
+	      <ul id="nav-mobile" class="right hide-on-med-and-down">
+	        <li><a href = "{% url 'my_travel_logout' %}"> Logout</a></li>
+	      </ul>
+	    </div>
+  	</nav>
+	<div id = 'welcome'>
+		<h4 id = 'header' class = 'left-align'> <strong>Welcome,<strong> {{ request.session.first_name }}! </h4>
+	</div>
+	<
 
+<<<<<<< HEAD
 	<h1> choose your adventure </h1>
 	<p> I am interested in <select>
 	<option> list of activities </option>
@@ -27,8 +47,18 @@
 
 	<!--menu bar -->
 	<a href = "{% url 'my_travel_home' %}"> Home</a> | <a href = "{% url 'my_travel_destination' %}"> Destination</a> | <a href = "{% url 'my_travel_profile' %}"> Profile</a>
+=======
+>>>>>>> dfc5e9ed9d3cdee61c2272b5d4ef28a070d1295b
 
 
+<!-- 
+		<div class = 'row navheader'>
+		<div class="col l6 push-l6 highlight"><a href = "{% url 'my_travel_logout' %}"> Logout</a></div>
+
+			
+		<div class="col l6 pull-l6 highlight"><a href = "{% url 'my_travel_home' %}"> Home</a> | <a href = "{% url 'my_travel_destination' %}"> Destination</a> | <a href = "{% url 'my_travel_profile' %}"> Profile</a></div>
+	</div> 
+ -->
 
 
 

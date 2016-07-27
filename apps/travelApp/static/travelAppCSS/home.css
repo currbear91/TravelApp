@@ -1,0 +1,31 @@
+body{
+	background-color: whitesmoke;
+/*	text-align: center;
+	margin: 0 auto;*/
+	font-family: 'block'
+}
+
+
+#headerlogo{
+
+	text-align: center;
+	height: 100px;
+	font-weight: bold;
+	font-size: 4em; 
+}
+
+
+
+
+a{
+	font-size: 1.9em;
+	font-weight: bolder;
+}
+
+nav{
+	background-image: linear-gradient(#FF5722, #E64A19,#FF5722,#FF5722,#E64A19);
+	border: 1px groove whitesmoke;
+	padding-left: 10px;
+
+	
+}
