@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import User, UserManager, Place, Season, Activity
+from .models import User, UserManager, Place, Season, Activity, Season, PlaceManager, SeasonPlace
 from django.contrib  import messages
 import datetime
 from django.core.urlresolvers import reverse
@@ -59,32 +59,55 @@ def index(request):
 
 def adminform(request):
 	print("*"*10)
-	fall = Season.objects.get(name = 'fall')
-	print request.POST['location']
-	print fall.name
-	place = Place.objects.create(title = request.POST['location'])
-	place.season.add(fall)
-	spring = Season.objects.get(name = 'spring')
-	place.season.add(spring)
-	print spring.name
-	summer = Season.objects.get(name = 'summer')
-	place.season.add(summer)
-	winter = Season.objects.get(name = 'winter')
-	place.season.add(winter)
-	print Place.objects.all()
+	results = Place.placeManager.addSea()
+	results2 = Place.placeManager.addAct()
+	place = Place.objects.create(location = request.POST['location'])
+	place2 = Place.objects.filter(location = request.POST['location'])
+	# print test['season']
+	test2 = request.POST['season']
+	season = Season.objects.get(name = test2)
+	place.season.add(season)
+	test = request.POST.getlist('activity')
+
+
+	print test
+	for item in test:
+		act = Activity.objects.get(name = item)
+		place.activities.add(act)
+		sp = SeasonPlace.objects.create(activity = act, season= season, place = place2[0])
+		print act
+		print SeasonPlace.objects.all()
+
+
+	
+
+	return redirect(reverse('my_admin_page'))
+
+def delete(request, id):
+	test = Place.objects.get(id = id)
+	test.delete()
 	return redirect(reverse('my_admin_page'))
 
 def adminpage(request):
-	return render(request, 'travelAppTemplates/admin.html')
+	context = {
+		'seasons': Season.objects.all(),
+		'place': Place.objects.all(),
+		'activities': Activity.objects.all(),
+		'seaspoon': SeasonPlace.objects.all()
+	}
+	return render(request, 'travelAppTemplates/admin.html', context)
 
 
 def adminp(request):
 	return render(request, 'travelAppTemplates/adminindex.html')
 
 def home(request):
+	context = {
+		'seasons': Season.objects.all(),
+		'activities': Activity.objects.all(),
+	}
 
-
-	return render(request, 'travelAppTemplates/home.html')
+	return render(request, 'travelAppTemplates/home.html',context)
 
 def register(request):
 	return render(request, 'travelAppTemplates/registration.html')

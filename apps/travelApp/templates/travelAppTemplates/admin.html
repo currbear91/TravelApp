@@ -9,10 +9,14 @@
 	{% csrf_token %}
 		<p> Title: <input type='text' name='location'></p>
 		<p> Season: </p>
-		<input type="checkbox" name='season' value="fall">Fall
-		<input type="checkbox" name='season' value="winter">Winter
-		<input type="checkbox" name='season' value="spring">Spring
-		<input type="checkbox" name='season' value="summer">Summer
+		<select name = 'season'>
+			<option value ='fall'>Fall</option>
+			<option value='winter'>Winter</option>
+			<option value='spring'>Spring</option>
+			<option value='summer'>Summer</option>
+			<option value='any'>Any</option>
+		</select>
+
 		<p> Activites: </p>
 		<input type="checkbox" name='activity' value="hiking">Hiking
 		<input type="checkbox" name='activity' value="swimming">swimming
@@ -23,6 +27,8 @@
 		<input type="checkbox" name='activity' value="climbing">climbing
 		<input type="checkbox" name='activity' value="family">family
 		<input type="checkbox" name='activity' value="shopping">shopping
+		<input type="checkbox" name='activity' value="sight-seeing">sight-seeing
+		<input type="checkbox" name='activity' value="any">any
 		<p> Upload Picture:  
 
 		<input type="file" name="img" ></p>
@@ -30,6 +36,30 @@
 
 		<p> <input type='submit' value='submit'></p>
 	</form>
+	
+	<table>
+		<tr>
+			<th> Location </th>
+			<th> Season </th>
+			<th> Activites </th>
+			<th> Action </th>
+		</tr>
+		{% for item in place %}
+		<tr>
+			<td><p> {{ item.location }}</p></td>
+			<td><p>{% for season in item.season.all %} {{season.name}} {% endfor %}</p></td>
+			<td><p> {% for item in item.activities.all %} {{item.name}} {% endfor %}</p></td>
+			<td> <a href = "{% url 'my_admin_delete' item.id %}">Delete </a></td>	
+		</tr>
+		{% endfor %}
+	</table>
+		
+		
+		
+		
+	
+	
+		
 
 </body>
 </html>

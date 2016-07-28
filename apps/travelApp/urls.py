@@ -16,5 +16,6 @@ urlpatterns = [
     url(r'^trip/$', views.specificTrip, name = 'my_travel_trip'),
     url(r'^finder/$', views.finderResults, name = 'my_travel_finder'),
     url(r'^destination/$', views.destinationResults, name = 'my_travel_destination'),
+    url(r'^delete/(?P<id>\d+)$', views.delete, name = 'my_admin_delete'),
 ]
 
