@@ -60,6 +60,23 @@ class UserManager(models.Manager):
 
 # class 
 
+class PlaceManager(models.Manager):
+	def addSea(self):
+		test = []
+		for item in ('winter', 'summer', 'fall', 'spring', 'any'):
+			test.append(item)
+			if not Season.objects.filter(name = item):
+				Season.objects.create(name = item)	
+		return test
+
+
+	def addAct(self):
+		test = []
+		for item in ('hiking', 'swimming', 'skiing', 'museums', 'eating', 'beach', 'family','shopping', 'climbing', 'any', 'sight-seeing'):
+			test.append(item)
+			if not Activity.objects.filter(name = item):
+				Activity.objects.create(name = item)
+		return test
 
 
 
@@ -74,20 +91,13 @@ class User(models.Model):
 	userManager = UserManager()
 	objects = models.Manager()
 
+
+
 class Activity(models.Model):
 	name = models.CharField(max_length=255)
 	created_at = models.DateField(auto_now_add=True)
 	updated_at = models.DateField(auto_now=True)
-
-class Place(models.Model):
-	location = models.CharField(max_length=255)
-	image = models.ImageField(null = True, upload_to = "media/TravelApp")
-	created_at = models.DateField(auto_now_add = True)
-	updated_at = models.DateField(auto_now = True)
-	travellers = models.ManyToManyField(User)
-	activities = models.ManyToManyField(Activity)
-
-
+	objects = models.Manager()
 
 class Season(models.Model):
 	name = models.CharField(max_length=50)
@@ -96,12 +106,22 @@ class Season(models.Model):
 	objects = models.Manager()
 
 
+class Place(models.Model):
+	location = models.CharField(max_length=255)
+	image = models.ImageField(null = True, upload_to = "media/TravelApp")
+	created_at = models.DateField(auto_now_add = True)
+	updated_at = models.DateField(auto_now = True)
+	travellers = models.ManyToManyField(User)
+	activities = models.ManyToManyField(Activity)
+	season = models.ManyToManyField(Season)
+	placeManager = PlaceManager()
+	objects = models.Manager()
 
-
-# for item in ('winter', 'summer', 'fall', 'spring'):
-# 	if not Season.objects.filter(name = item):
-# 		Season.objects.create(name = item)
-
+class SeasonPlace(models.Model):
+	activity = models.ForeignKey(Activity)
+	season = models.ForeignKey(Season)
+	place = models.ForeignKey(Place)
+	objects= models.Manager()
 
 
 

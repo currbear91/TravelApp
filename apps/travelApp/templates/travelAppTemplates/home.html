@@ -36,9 +36,9 @@
 						<tr>
 							<td class='boldtd col s12'>Choose Your Adventure:</td>
 							<td><select class = 'browser-default  input-sm '>
-									<option>Rock Climbing</option>
-									<option>Hiking</option>
-									<option>Camping</option>
+								{% for item in activities %}
+									<option value ='{{item.name}}' >{{item.name}}</option>
+									{% endfor %}
 								</select>
 							</td>
 						</tr>
@@ -54,10 +54,11 @@
 						<tr>
 							<td class='boldtd col s12'>During</td>
 							<td><select class = 'browser-default input-sm'>
-									<option>Spring</option>
-									<option>Summer</option>
-									<option>Fall</option>
-									<option>Winter</option>
+								{% for item in seasons %}
+								<option value ='{{item.name}}' >{{item.name}}</option>
+								{% endfor %}
+								</select>
+				
 								</select>
 							</td>
 						</tr>
