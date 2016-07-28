@@ -10,6 +10,39 @@ body{
 
 }
 
+#content{
+	content: '';
+	/*background-color: whitesmoke;*/
+	background-image: url('../travelAppIMG/login2.jpg');
+	-webkit-filter: blur(px);
+	margin: 0 auto;
+	/*display: block;*/
+	z-index: -1;
+	height: 100%;
+	/*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
+	background-size: cover;
+	background-repeat: no-repeat;
+/*	background-position: absolute;*/	
+	position: fixed;
+	width: 100%;
+	
+}
+
+#container{
+	margin: 0 auto;
+	
+	/*position: absolute;*/
+	/*min-height: 990px;*/
+	/*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);	*/
+	width: 100%;
+	height: 100%;
+	position: fixed; 
+	/*height: auto;*/
+		
+
+}
+
+
 
 form{
 	display: inline-block;
@@ -28,21 +61,13 @@ form{
 	width: 100px;
 }
 
-.btn{
-	line-height: 5px;
-	background-color: silver;
-	border: transparent;
-	align-self: right;
-	position: absolute;
 
-}
 
 table, th, td{
 	text-align: left; 
 	margin: auto;
-	padding-top: 20px;
-	font-weight: bold;
-	/*font-size: 1.1em;*/
+	padding: 5px; 
+	color: black;
 
 
 }
@@ -51,13 +76,6 @@ table, th, td{
 	}
 
 
-#container{
-	display: block;
-	
-	margin: 0 auto;
-		
-
-}
 .homepage{
 
 	opacity: .9;
@@ -65,20 +83,36 @@ table, th, td{
 	margin: 0 auto;
 }
 
+.logotop{
+	margin: 0 auto;
+	background-size: contain;
+	position:;
+	background-color: white;
+	display: block;
+	width: 100%;
+
+
+}
+
+
 .here{
 
-	/*display: block;*/
-	background: rgba(245, 245, 245, .7);
+	/*position: fixed;*/
+	display: block;
+	background: rgba(250, 250, 250, .8);
+	border: 3px solid whitesmoke;
+	border-top: 1px solid silver;
+	width: 40%;
+	margin-left: 30%;
+	border-bottom-right-radius:5px;
+	border-bottom-left-radius:5px; 
+	/*border-top: ;*/
 	/*border-bottom: 3px solid black;*/
-	/*margin-left: 350px;*/
-	
-	position: fixed;
-	margin-top: -800px;
-	border: 7px solid black;
-	margin-left: 500px;
-	border-radius: 10px;
-	width: 30%;
-	padding-bottom: 20px;
+	/*height: 236px;*/
+	/*text-align:center;*/
+	/*background-size: cover;*/
+	/*margin: 0, auto;*/
+	margin-top: 100px;
 	
 
 }
@@ -87,7 +121,7 @@ table, th, td{
 
 	position: fixed;
 	/*display: block;*/
-	margin-top: -875px;
+	/*margin-top: -875px;*/
 	font-size: 3em;
 	font-weight: bolder;
 	
@@ -103,11 +137,20 @@ table, th, td{
 
 
 .btn{
-	line-height: 15px; 
-	border-color: blue;
-	background-color: silver;
-	margin-left: 125px;
-	
+	/*display: block;*/
+	background-color: transparent;
+	border: white;
+	color: black;
+	width: 295px;	
+	font-weight: bold;
+	letter-spacing: 5px;
+	/*margin-left: */
+	text-align: left;
+
+}
+.btn:hover{
+	color: black;
+	background-color: transparent;
 }
 
 ul{

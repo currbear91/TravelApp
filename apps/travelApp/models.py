@@ -1,4 +1,5 @@
 from __future__ import unicode_literals
+from django.contrib import admin
 from django.db import models
 from django.contrib  import messages
 import re
@@ -57,6 +58,10 @@ class UserManager(models.Manager):
 			return [passflag, errors]
 		return [passflag, guy]
 
+
+
+
+
 class User(models.Model):
 	first_name = models.CharField(max_length = 255)
 	last_name = models.CharField(max_length = 255)
@@ -69,9 +74,9 @@ class User(models.Model):
 	objects = models.Manager()
 
 class Activity(models.Model):
-	hiking = models.CharField(max_length = 255)
-	climbing = models.CharField(max_length = 255)
-	beach = models.CharField(max_length = 255)
+	name = models.CharField(max_length=255)
+	created_at = models.DateField(auto_now_add=True)
+	updated_at = models.DateField(auto_now=True)
 
 class Place(models.Model):
 	location = models.CharField(max_length=255)
@@ -92,32 +97,9 @@ class Season(models.Model):
 
 
 
-class Season(models.Model):
-	name = models.CharField(max_length = 50)
-	created_at = models.DateField(auto_now_add = True)
-	updated_at = models.DateField(auto_now = True)
-
-class Activity(models.Model):
-	activity = models.CharField(max_length = 100)
-	created_at = models.DateField(auto_now_add = True)
-	updated_at = models.DateField(auto_now = True)
-
-class Place(models.Model):
-	title = models.CharField(max_length = 100)
-	image = models.ImageField(upload_to = "media")
-	created_at = models.DateField(auto_now_add = True)
-	updated_at = models.DateField(auto_now = True)
-	season = models.ManyToManyField(Season)
-	activity = models.ManyToManyField(Activity)
-	objects = models.Manager()
-
-
-
-
-
-for item in ('winter', 'summer', 'fall', 'spring'):
-	if not Season.objects.filter(name = item):
-		Season.objects.create(name = item)
+# for item in ('winter', 'summer', 'fall', 'spring'):
+# 	if not Season.objects.filter(name = item):
+# 		Season.objects.create(name = item)
 
 
 

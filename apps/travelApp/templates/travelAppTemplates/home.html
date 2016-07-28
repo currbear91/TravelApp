@@ -10,83 +10,68 @@
 </head>
 	<body>
 		<div id='container'>
-		
-			<div id='headerlogo'>
-				<span class = 'header center-align'>Pacific NW</span>
-				
-			</div>
+		<div id = 'content'>
+		</div>
 			<nav>
 			    <div class="nav-wrapper">
-			      <a href = "{% url 'my_travel_home' %}"> Travler</a>
+			      <a class = 'logo' href = "{% url 'my_travel_home' %}"> Tripster</a>
 			      <ul id="nav" class="right">
+					<li class = 'username'> Welcome,{{ request.session.first_name }}! </li>
+					<li><a href="{% url 'my_travel_profile' %}">Profile</a></li>
 			        <li><a href = "{% url 'my_travel_logout' %}"> Logout</a></li>
 			      </ul>
 			    </div>
 		  	</nav>
-			<h4 id = 'header' class = 'left-align'> Welcome,{{ request.session.first_name }}! </h4>
-			<div id = 'welcome' class = 'input-field'>
-				<table>
-					<tr>
-						<td class='boldtd'>Choose Your Adventure:</td>
-						<td><select class = 'browser-default input-sm '>
-								<option>Rock Climbing</option>
-								<option>Hiking</option>
-								<option>Camping</option>
-							</select>
-						</td>
-					</tr>
-					<tr>
-						<td class='boldtd'>In:</td>
-						<td><select class = 'browser-default input-sm'>
-								<option>Seattle</option>
-								<option>Portland</option>
-								<option>Forks</option>
-							</select>
-						</td>
-					</tr>
-					<tr>
-						<td class='boldtd'>During</td>
-						<td><select class = 'form-control input-sm'>
-								<option>Spring</option>
-								<option>Summer</option>
-								<option>Fall</option>
-								<option>Winter</option>
-							</select>
-						</td>
-					</tr>
-					<tr>
-						<td></td>
-						<td><input class = 'btn btn-default' type="submit" name="submit_trip" value="Find Your Adventure"></td>
-					</tr>
+		  	<div id ='adventurebox'>
+				<ul class="nav nav-tabs col l12">
+					<li class=""><a href="#home" data-toggle="tab" aria-expanded="true">Plan Your Adventure</a></li>
+					<li class=""><a href="#home" data-toggle="tab" aria-expanded="true">Activity</a></li>
+					<li class=""><a href="#home" data-toggle="tab" aria-expanded="true">Place</a></li>
+					<li class=""><a href="#home" data-toggle="tab" aria-expanded="true">Season</a></li>
+				</ul>
+				<div id = 'welcome' class = ' input-field'>
+					<table>
+						<h3>Adventure Planner</h3>
+						<hr>
+						<tr>
+							<td class='boldtd col s8'>Choose Your Adventure:</td>
+							<td><select class = 'browser-default  input-sm '>
+									<option>Rock Climbing</option>
+									<option>Hiking</option>
+									<option>Camping</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td class='boldtd col-sm-8'>In:</td>
+							<td><select class = 'browser-default input-sm'>
+									<option>Seattle</option>
+									<option>Portland</option>
+									<option>Forks</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td class='boldtd col-sm-8'>During</td>
+							<td><select class = 'browser-default input-sm'>
+									<option>Spring</option>
+									<option>Summer</option>
+									<option>Fall</option>
+									<option>Winter</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td><input class = 'btn btn-default' type="submit" name="submit_trip" value="Find Your Adventure"></td>
+						</tr>
 
-				</table>	
+					</table>	
+				</div>
 			</div>
-
 		</div>
 
-<<<<<<< HEAD
-	<h1> choose your adventure </h1>
-	<p> I am interested in <select>
-	<option> list of activities </option>
-	</select> </p>
-	<p> In  <select>
-	<option> list of regions </option>
-	</select></p>
-	<p> during 
 
-	<select> 
-	<option> Spring </option>
-	<option> Summer </option>
-	<option> Fall </option>
-	<option> Winter </option>
-	<option> Any </option>
-	</select></p>
-
-
-	<!--menu bar -->
-	<a href = "{% url 'my_travel_home' %}"> Home</a> | <a href = "{% url 'my_travel_destination' %}"> Destination</a> | <a href = "{% url 'my_travel_profile' %}"> Profile</a>
-=======
->>>>>>> dfc5e9ed9d3cdee61c2272b5d4ef28a070d1295b
 
 
 <!-- 

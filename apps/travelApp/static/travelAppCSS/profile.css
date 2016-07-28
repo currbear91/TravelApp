@@ -1,0 +1,110 @@
+body{
+	background-color: white;
+	/*text-align: center;*/
+	margin: 0 auto;
+	font-family: 'didot'
+}
+
+#container{
+
+	margin: 0 auto;
+	display: block;
+	/*position: fixed;*/
+	background-color: whitesmoke;
+
+
+	min-height: 990px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	width: 1200px;
+	height: auto;
+
+	
+
+}
+
+nav{
+	background: linear-gradient(#517394, #3f5973,#3f5973,#517394,#517394);
+	height: 
+	
+	/*border: 1px groove whitesmoke;*/
+	padding-left: 10px;
+}
+	.logo{
+		margin-left: 40px;
+	}
+
+
+.profiledash{
+	width: 100%;
+	display:block;
+	margin-right: 50px;
+	margin-top: 80px;
+	color: black;
+}
+
+/*	background: linear-gradient( to bottom,rgba(52, 73, 94,.7),rgba(52, 73, 94,.7),rgba(63, 89, 115,.7),rgba(63, 89, 115,.7));
+
+	
+}
+
+	/*************BOOTSTRAP START*****************/
+
+
+.
+	/**************BOOTSTRAP END********************/
+
+
+	.boldtd{
+		font-size: 2em;
+		font-weight: bold ;
+		text-align: left;
+}
+.username{
+
+	margin-right: 10px;
+
+}
+
+.tripdetails{
+	display: inline-block;
+	vertical-align: top;
+}
+
+.tripreview:hover{
+	color: black;
+	color: none;
+
+}
+
+.card-content{
+
+	display:inline-block;
+	/*padding:0px;
+	width: 10px;*/
+}
+.card-image, p{
+	width: 200px;
+	display: block;
+	padding: ;
+	margin-right: 80px;
+	margin-bottom: 20px;
+	display: inline-block;
+	text-align: center;
+	font-weight: bold;
+
+}
+
+
+
+
+a{
+	font-size: 4em;
+	font-weight: bold;
+	font-family: 'didot';
+	text-decoration: none;
+
+	
+}
+a:hover{
+	text-decoration: none;
+	color: white;

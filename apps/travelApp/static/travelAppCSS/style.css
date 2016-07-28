@@ -5,58 +5,131 @@ body{
 	font-family: 'didot'
 }
 
-table, th, td{
-	text-align: left; 
-	margin: auto;
-	font-size: 1.2em;
-	font-weight: bolder;
+#content{
+	/*content: '';*/
+	/*background-color: whitesmoke;*/
+	background-image: url('../travelAppIMG/login2.jpg'),url('../travelAppIMG/header.png');
+	-webkit-filter: blur(px);
+	margin: 0 auto;
+	/*display: block;*/
+	z-index: -1;
+
+	height: 100%;
+	/*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
+	background-size: cover;
+	background-repeat: no-repeat;
+/*	background-position: absolute;*/	
+	position: fixed;
+	width: 100%;
 	
+}
+
+.logotop{
+	margin: 0 auto;
+	background-size: contain;
+	position:;
+	background-color: white;
+	display: block;
+	width: 100%;
+
 
 }
 
+
+table, th, td{
+	text-align: left; 
+	margin: auto;
+	padding: 15px; 
+	color: black;
+
+
+}
+h1{
+
+   
+	 
+}
+
+
 	.nonuser{
-		font-size: .6em;
-		text-align: right;
+		font-size: .7em;
+		/*text-align: left;*/
+		/*margin-left: 100px;*/
 
 	}
 
 	
 
 #container{
-	display: block;
-	
 	margin: 0 auto;
+	
+	/*position: absolute;*/
+	/*min-height: 990px;*/
+	/*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);	*/
+	width: 100%;
+	height: 100%;
+	position: fixed; 
+	/*height: auto;*/
 		
 
 }
-.homepage{
 
-	opacity: .8;
+
+.loginform{
+
+	/*position: fixed;*/
 	display: block;
-	margin: 0 auto;
+	background: rgba(250, 250, 250, .8);
+	border: 3px solid whitesmoke;
+	border-bottom: none;
+	/*border-bottom: 3px solid black;*/
+	width: 500px;
+	height: 300px;
+	/*text-align:center;*/
+	/*background-size: cover;*/
+	/*margin: 0, auto;*/
+	margin-top: 150px;
+	margin-left: 33%;
+	/*padding-bottom: 50px;*/
+	/*opacity: .9;*/
 }
 
-.here{
+.login{
 
-	position: fixed;
+	/*position: fixed;*/
+	display: block;
+	background: rgba(250, 250, 250, 1);
+	border: 3px solid whitesmoke;
+	border-top: 1px solid silver;
+	width: 500px;
+	margin-left: 33%;
+	border-bottom-right-radius:5px;
+	border-bottom-left-radius:5px; 
+	/*border-top: ;*/
+	/*border-bottom: 3px solid black;*/
+	/*height: 236px;*/
+	/*text-align:center;*/
+	/*background-size: cover;*/
+	/*margin: 0, auto;*/
+	/*margin-top: 100px;*/
+	
+
+}
+
+.btn{
 	/*display: block;*/
-	margin-top: -700px;
-	
-	background: rgba(245, 245, 245, .5);
-	border-top: 3px solid black;
-	border-bottom: 3px solid black;
-	width: 100%;
-	/*margin-left: 350px;*/
-	padding-bottom: 20px;
-	opacity: .9;
-
+	background-color: transparent;
+	border: white;
+	color: black;
+	width: 295px;	
+	font-weight: bold;
+	letter-spacing: 5px;	
+}
+.btn:hover{
+	color: black;
+	background-color: transparent;
 }
 
 
 
-.homebtn{
-	line-height: 15px; 
-	border-color: whitesmoke;
-	background-color: silver;
 	
-}

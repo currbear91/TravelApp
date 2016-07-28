@@ -9,41 +9,47 @@
 <body>
 
 	<div id = 'container'>
-		<div class='homeimage'>
-		{% load staticfiles %}
-			<img class="img-responsive homepage" src="{% static 'travelAppIMG/seattle_home.jpg' %}" alt="Chania" width="">
-		
-			<div class= 'here'>
+		<div class ='logotop'>
+			<img src="{% static 'travelAppIMG/logo.png' %}" width="150" height="150">
+			
+		</div>
+
+		<div id='content'>
+		</div>
+		<div class = 'loginform'>
+			<div class= 'here valign-wrapper'>
 				<h1>Welcome!</h1>
 				<form action="{% url 'my_travel_login' %}" method = 'POST'>
-				{% csrf_token %}
+					{% csrf_token %}
 					<table>
 						<tr>
-							<th>Username:</th>
-							<th>Password:</th>
-							<th></th>
+
+							<td><input class="form-control input-lg" type="text" name="username" placeholder="Username"></td>
 						</tr>
 						<tr>
-							<td><input class="form-control input-sm" type="text" name="username" placeholder="Username"></td>
-							<td><input class="form-control input-sm" type="password" name="password" placeholder="Password"></td>
-							<td><input class = 'btn btn-primary homebtn' type="submit" name="enter" value="Log In"></td>
+
+							<td><input class="form-control input-lg" type="password" name="password" placeholder="Password"></td>
+
 						</tr>
+
 						<tr>
-							<td></td>
-							<td class = 'nonuser'>Not a user? <a href="{% url 'my_travel_register' %}">Sign Up Here!</a></td>
+							<td>Not a user? <a class = 'nonuser' href="{% url 'my_travel_register' %}">Sign Up Here!</a></td>
 						</tr>
+		
 					</table>
-										{% if messages %}
-					<ul class="messages">
-	{% for message in messages %}
-	<li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }} </li>
-	{% endfor %}
-</ul>
-{% endif %}
-					
-				</form>
 			</div>
-		</div>	
+		</div>
+				<div class='login'>
+					<input class = 'btn btn-primary homebtn' type="submit" name="enter" value="Log In"></td>
+				</div>
+				</form>
+		{% if messages %}
+		<ul class="messages">
+		{% for message in messages %}
+		<li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }} </li>
+		{% endfor %}
+		</ul>
+		{% endif %}
 	</div>
 
 </body>

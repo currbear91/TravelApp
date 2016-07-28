@@ -52,9 +52,9 @@ def processlogin(request):
 ####################################################
 
 def index(request):
-	# if request.session['id']:
+	# try request.session['id']:
 	# 	return redirect(reverse('my_travel_home'))
-	# else:
+	# except KeyError:
 	return render(request, 'travelAppTemplates/index.html')
 
 def adminform(request):
@@ -103,6 +103,7 @@ def destinationResults(request):
 
  
 def logout(request):
-		request.session.clear()
-		return redirect(reverse('my_travel_index'))
+	
+	request.session.clear()
+	return redirect(reverse('my_travel_index'))
 

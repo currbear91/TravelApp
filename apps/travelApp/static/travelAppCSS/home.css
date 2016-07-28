@@ -2,21 +2,50 @@ body{
 	background-color: white;
 	/*text-align: center;*/
 	margin: 0 auto;
-	font-family: 'block'
+	font-family: 'didot'
 }
 
-#container{
-	background-color: whitesmoke;
+#content:before{
+	content: '';
+	/*background-color: whitesmoke;*/
+	background-image: url('../travelAppIMG/baker.jpg');
+	-webkit-filter: blur(2px);
 	margin: 0 auto;
-	width:990px;
+	display: block;
+	z-index: -1;
+
+
 	min-height: 990px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	background-size:contain;
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: fixed;
+	width: 100%;
+	height: auto;
+}
+
+
+#container{
+
+	margin: 0 auto;
+	display: block;
+	position: fixed;
+
+
+
+	min-height: 990px;
+/*	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+*/	width: 100%;
+	height: auto;
+
 	
 
 }
 
 #headerlogo{
 
+	
 	text-align: center;
 	height: 100px;
 	font-weight: 900;
@@ -25,51 +54,109 @@ body{
 }
 
 nav{
-	background-image: linear-gradient(#FF5722, #E64A19,#FF5722,#FF5722,#E64A19);
+	background-image: linear-gradient(#517394, #3f5973,#3f5973,#517394,#517394);
 	
-	border: 1px groove whitesmoke;
+	/*border: 1px groove whitesmoke;*/
 	padding-left: 10px;
 }
+	.logo{
+		margin-left: 40px;
+	}
 
+
+#adventurebox{
+	width: 35%;
+	display:block;
+	margin-right: 50px;
+	margin-top: 80px;
+/*	background: linear-gradient( to bottom,rgba(52, 73, 94,.7),rgba(52, 73, 94,.7),rgba(63, 89, 115,.7),rgba(63, 89, 115,.7));
+*/	position: absolute;
+	margin-left: 30%;
+}
+
+	/*************BOOTSTRAP START*****************/
+
+
+.nav-tabs{
+  background-color:transparent;
+  margin-bottom: -15px;
+}
+.tab-content{
+    background-color:#303136;
+    color:#fff;
+    
+}
+.nav-tabs  li  a{
+  border: 1px solid rgba(107, 140, 174,1);
+  border-bottom: none;
+  width: auto;
+  font-size: 1.3em;
+  background: rgba(245,245,245,.8);
+  color: black;
+  text-align: center;
+  margin-right: 20px;
+
+}
+.nav-tabs li a:hover{
+  background: linear-gradient(rgba(52, 73, 94,1),rgba(52, 73, 94,1),rgba(107, 140, 174,1),rgba(107, 140, 174,1)) !important;
+  border: medium none;
+  /*border-radius: px;*/
+  color:#fff;
+}
+
+	/**************BOOTSTRAP END********************/
 
 #welcome{
 
-	border: 1em solid rgba(255, 87, 34,.5);
-	border-radius: 40px;
-	width: 40%;
+
+	/*border: 1em solid rgba(52, 73, 94,.7);*/
+	/*border-radius: 10px;*/
+	width: ;
+	border: 1px solid rgba(107, 140, 174,1);
 	height: auto;
-	margin-right: 50px;
-	margin-top: 20px;
+	/*margin-right: 50px;
+	margin-top: 80px;*/
 	/*background: rgba(255, 255, 255, .3);*/
-	background: linear-gradient( to bottom,rgba(255, 87, 34,.2),rgba(255, 87, 34,.2),rgba(255, 87, 34,.2),rgba(230, 74, 25,.2));
-	box-shadow: 0 4px 83px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+	background: linear-gradient(rgba(245,245,245,.8),rgba(245,245,245,.8));
+	/*background: linear-gradient( to bottom,rgba(52, 73, 94,.7),rgba(52, 73, 94,.7),rgba(63, 89, 115,.7),rgba(63, 89, 115,.7));*/
+	box-shadow: 0 4px 83px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
 
 
 
-	padding: 10px;
-	float: right;
+
+	
+	position: relative;
+	/*margin-left: 30%;*/
 
 }
 
 	.boldtd{
-		font-size: 1.2em;
-		font-weight: ;
+		font-size: 2em;
+		font-weight: bold ;
 		text-align: left;
 	}
-	option{
+	select{
+		width: 200px;
 		
 	}
 
-#header{
+.username{
 
-	margin-left: 10px;
+	margin-right: 10px;
+
+}
+
+table tr td{
+
+	width: 200px;
+	height: auto;
 }
 
 
 
 a{
 	font-size: 4em;
-	font-weight: bolder;
+	font-weight: bold;
 	font-family: 'didot';
 
 	
@@ -77,6 +164,16 @@ a{
 a:hover{
 	text-decoration: none;
 	color: white;
+}
+
+h3{
+	padding-left: 10px;
+	padding-top: 10px;
+}
+
+hr{
+	border: 2px solid white;
+	border-radius: 5px;
 }
 
 
