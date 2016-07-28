@@ -108,6 +108,7 @@ def home(request):
 		'seasons': Season.objects.all(),
 		'activities': Activity.objects.all(),
 	}
+<<<<<<< HEAD
 
 	if 'id' not in request.session:
 		return redirect(reverse('my_travel_index'))
@@ -117,6 +118,10 @@ def home(request):
 		return render(request, 'travelAppTemplates/home.html')
 	return render(request, 'travelAppTemplates/home.html',context)
 
+=======
+
+	return render(request, 'travelAppTemplates/home.html',context)
+>>>>>>> cb4d06c9aaa67547ef2261cb97830c229603fc45
 
 def register(request):
 	return render(request, 'travelAppTemplates/registration.html')
