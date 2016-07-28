@@ -10,14 +10,16 @@ body{
 
 }
 
+
 #content{
-	content: '';
+	/*content: '';*/
 	/*background-color: whitesmoke;*/
-	background-image: url('../travelAppIMG/login2.jpg');
+	background-image: url('../travelAppIMG/login2.jpg'),url('../travelAppIMG/header.png');
 	-webkit-filter: blur(px);
 	margin: 0 auto;
 	/*display: block;*/
 	z-index: -1;
+
 	height: 100%;
 	/*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
 	background-size: cover;
@@ -27,7 +29,6 @@ body{
 	width: 100%;
 	
 }
-
 #container{
 	margin: 0 auto;
 	
@@ -48,6 +49,8 @@ form{
 	display: inline-block;
 	margin-left: ;
 	margin-top: 20px;
+	width: 100%;
+	height: 100%;
 }
 
 .input-md{
@@ -76,13 +79,6 @@ table, th, td{
 	}
 
 
-.homepage{
-
-	opacity: .9;
-	display: block;
-	margin: 0 auto;
-}
-
 .logotop{
 	margin: 0 auto;
 	background-size: contain;
@@ -97,15 +93,15 @@ table, th, td{
 
 .here{
 
-	/*position: fixed;*/
+	position: fixed;
 	display: block;
 	background: rgba(250, 250, 250, .8);
 	border: 3px solid whitesmoke;
 	border-top: 1px solid silver;
 	width: 40%;
 	margin-left: 30%;
-	border-bottom-right-radius:5px;
-	border-bottom-left-radius:5px; 
+	/*border-bottom-right-radius:5px;
+	border-bottom-left-radius:5px; */
 	/*border-top: ;*/
 	/*border-bottom: 3px solid black;*/
 	/*height: 236px;*/
@@ -141,17 +137,19 @@ table, th, td{
 	background-color: transparent;
 	border: white;
 	color: black;
-	width: 295px;	
+	width: 100%;	
 	font-weight: bold;
 	letter-spacing: 5px;
-	/*margin-left: */
+	margin-left: 50%;
 	text-align: left;
 
 }
 .btn:hover{
 	color: black;
 	background-color: transparent;
+	
 }
+
 
 ul{
 	margin-top: 25px;
@@ -162,3 +160,18 @@ li{
 	font-weight: bolder;
 }
 
+.alert-danger{
+
+	list-style: none;
+	width: 50%;
+	display: block;
+	margin: 0 auto;	
+	margin-left: 20%;
+	font-size: 1.1em;	
+	border: 2px solid #b30000;
+	border-radius: 10px;
+
+
+
+	
+}

@@ -8,7 +8,7 @@ body{
 #content{
 	/*content: '';*/
 	/*background-color: whitesmoke;*/
-	background-image: url('../travelAppIMG/login2.jpg'),url('../travelAppIMG/header.png');
+	background-image: url('../travelAppIMG/login2.jpg');
 	-webkit-filter: blur(px);
 	margin: 0 auto;
 	/*display: block;*/
@@ -130,6 +130,19 @@ h1{
 	background-color: transparent;
 }
 
+.alert-danger{
+
+	list-style: none;
+	width: 50%;
+	display: block;
+	margin: 0 auto;	
+	margin-left: 25%;
+	font-size: 1.1em;	
+	border: 2px solid #b30000;
+	border-radius: 10px;
+
+	
+}
 
 
 	

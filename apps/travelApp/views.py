@@ -23,6 +23,8 @@ def processregister(request):
 		return redirect(reverse('my_travel_register'))
 
 def processlogin(request):
+	if request.method != "POST":
+		return redirect(reverse('my_travel_index'))
 	results = User.userManager.validlog(request.POST)
 	print request.POST['username']
 	if results[0]:
@@ -83,8 +85,12 @@ def adminp(request):
 
 def home(request):
 
+	if 'id' not in request.session:
+		return redirect(reverse('my_travel_index'))
 
-	return render(request, 'travelAppTemplates/home.html')
+	else:
+		user = User.objects.get(id = request.session['id'])
+		return render(request, 'travelAppTemplates/home.html')
 
 def register(request):
 	return render(request, 'travelAppTemplates/registration.html')

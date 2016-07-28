@@ -45,7 +45,7 @@ class UserManager(models.Manager):
  		errors = [] 
  		passflag = False
  		if len(self.filter(username = context['username'])) < 1:
- 			errors.append('invalid login')
+ 			errors.append('Invalid Login')
 		if len(self.filter(username = context['username'])) > 0:
 			guy = self.get(username = context['username'])
 			hashed = guy.password
@@ -58,6 +58,7 @@ class UserManager(models.Manager):
 			return [passflag, errors]
 		return [passflag, guy]
 
+# class 
 
 
 

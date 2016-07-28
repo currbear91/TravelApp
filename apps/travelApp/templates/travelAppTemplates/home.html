@@ -9,32 +9,32 @@
 
 </head>
 	<body>
-		<div id='container'>
 		<div id = 'content'>
 		</div>
+		<div id='container'>
 			<nav>
-			    <div class="nav-wrapper">
-			      <a class = 'logo' href = "{% url 'my_travel_home' %}"> Tripster</a>
-			      <ul id="nav" class="right">
-					<li class = 'username'> Welcome,{{ request.session.first_name }}! </li>
-					<li><a href="{% url 'my_travel_profile' %}">Profile</a></li>
-			        <li><a href = "{% url 'my_travel_logout' %}"> Logout</a></li>
-			      </ul>
+			    <div class="nav-wrapper logotop">
+			    	<div class='logo'>
+					<a class = 'logoimg' href = "{% url 'my_travel_home' %}"><img src="{% static 'travelAppIMG/logo.png' %}" width="100" height="100"></a>
+					</div>
+				    <ul id="nav" class="right">
+						<li class = 'username'> Welcome,{{ request.session.first_name }}! </li>
+						<li><a class="route" href="{% url 'my_travel_profile' %}">Profile</a></li>
+				        <li><a class="route" href = "{% url 'my_travel_logout' %}"> Logout</a></li>
+				    </ul>
 			    </div>
 		  	</nav>
 		  	<div id ='adventurebox'>
-				<ul class="nav nav-tabs col l12">
-					<li class=""><a href="#home" data-toggle="tab" aria-expanded="true">Plan Your Adventure</a></li>
-					<li class=""><a href="#home" data-toggle="tab" aria-expanded="true">Activity</a></li>
-					<li class=""><a href="#home" data-toggle="tab" aria-expanded="true">Place</a></li>
-					<li class=""><a href="#home" data-toggle="tab" aria-expanded="true">Season</a></li>
+				<ul class="nav nav-tabs col s12 l4">
+					<li class="plan"><a href="#home" data-toggle="tab" aria-expanded="true">Plan Your Adventure</a></li>
+					
 				</ul>
-				<div id = 'welcome' class = ' input-field'>
+				<div id = 'welcome' class = ' col s12 input-field'>
 					<table>
 						<h3>Adventure Planner</h3>
 						<hr>
 						<tr>
-							<td class='boldtd col s8'>Choose Your Adventure:</td>
+							<td class='boldtd col s12'>Choose Your Adventure:</td>
 							<td><select class = 'browser-default  input-sm '>
 									<option>Rock Climbing</option>
 									<option>Hiking</option>
@@ -43,7 +43,7 @@
 							</td>
 						</tr>
 						<tr>
-							<td class='boldtd col-sm-8'>In:</td>
+							<td class='boldtd col s12 m7 l4'>In:</td>
 							<td><select class = 'browser-default input-sm'>
 									<option>Seattle</option>
 									<option>Portland</option>
@@ -52,7 +52,7 @@
 							</td>
 						</tr>
 						<tr>
-							<td class='boldtd col-sm-8'>During</td>
+							<td class='boldtd col s12'>During</td>
 							<td><select class = 'browser-default input-sm'>
 									<option>Spring</option>
 									<option>Summer</option>
