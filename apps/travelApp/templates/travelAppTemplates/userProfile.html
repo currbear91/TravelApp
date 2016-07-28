@@ -9,43 +9,52 @@
 </head>
 <body>
 	<div id='container'>
-		<div id = 'content'>
-		</div>
-			<nav>
-			    <div class="nav-wrapper">
-			      <a class = 'logo' href = "{% url 'my_travel_home' %}"> Tripster</a>
-			      <ul id="nav" class="right">
+		<nav>
+		    <div class="nav-wrapper logotop">
+		    	<div class='logo'>
+				<a class = 'logoimg' href = "{% url 'my_travel_home' %}"><img src="{% static 'travelAppIMG/logo.png' %}" width="100" height="100"></a>
+				</div>
+			    <ul id="nav" class="right">
 					<li class = 'username'> Welcome,{{ request.session.first_name }}! </li>
-					<li><a href="{% url 'my_travel_home' %}">Home</a></li>
-			        <li><a href = "{% url 'my_travel_logout' %}"> Logout</a></li>
-			      </ul>
-			    </div>
-			    <div class = "profiledash col s12 m7">
-			    	<h2 class = 'header'>Your Trips</h2>
-		    		<div class='card-image hoverable'>
-		    			<a href="#"><img class = 'img-thumbnail' width="200" height="180" src="{% static 'travelAppIMG/canoe.jpg' %}"></a>
-		    			<p>***Location***</p>
-		    		</div>
-		    		<div class='card-image hoverable'>
-		    			<a href="#"><img class = 'img-thumbnail' width="200" height="180" src="{% static 'travelAppIMG/canoe.jpg' %}"></a>
-		    			<p>***Location***</p>
-		    		</div>
-		    		<div class='card-image hoverable'>
-		    			<a href="#"><img class = 'img-thumbnail' width="200" height="180" src="{% static 'travelAppIMG/canoe.jpg' %}"></a>
-		    			<p>***Location***</p>
-		    		</div>
-		    		<div class='card-image hoverable'>
-		    			<a href="#"><img class = 'img-thumbnail' width="200" height="180" src="{% static 'travelAppIMG/canoe.jpg' %}"></a>
-		    			<p>***Location***</p>
-		    		</div>
-		    		<div class='card-image hoverable'>
-		    			<a href="#"><img class = 'img-thumbnail' width="200" height="180" src="{% static 'travelAppIMG/canoe.jpg' %}"></a>
-		    			<p>***Location***</p>
-		    		</div>
-			    </div>
-		  	</nav>
-			</div>
-		</div>
+					<li><a class="route" href="{% url 'my_travel_home' %}">Home</a></li>
+			        <li><a class="route" href = "{% url 'my_travel_logout' %}"> Logout</a></li>
+			    </ul>
+		    </div>
+	  	</nav>
+		    <div class = "profiledash s12 m7">
+		    	<h2 class = 'header'>Your Trips</h2>
+	    		<div class='card-image hoverable'>
+	    			<a href="#"><img class = 'img-thumbnail' width="200" height="180" src="{% static 'travelAppIMG/canoe.jpg' %}"></a>
+	    			<p>***Location***</p>
+	    			<hr>
+	    		</div>
+	    		<div class='card-image hoverable'>
+	    			<a href="#"><img class = 'img-thumbnail' width="200" height="180" src="{% static 'travelAppIMG/canoe.jpg' %}"></a>
+	    			<p>***Location***</p>
+	    			<hr>
+	    		</div>
+	    		<div class='card-image hoverable'>
+	    			<a href="#"><img class = 'img-thumbnail' width="200" height="180" src="{% static 'travelAppIMG/canoe.jpg' %}"></a>
+	    			<p>***Location***</p>
+	    			<hr>
+	    		</div>
+	    		<div class='card-image hoverable'>
+	    			<a href="#"><img class = 'img-thumbnail' width="200" height="180" src="{% static 'travelAppIMG/canoe.jpg' %}"></a>
+	    			<p>***Location***</p>
+	    			<hr>
+	    		</div>
+	    		<div class='card-image hoverable'>
+	    			<a href="#"><img class = 'img-thumbnail' width="200" height="180" src="{% static 'travelAppIMG/canoe.jpg' %}"></a>
+	    			<p>***Location***</p>
+	    			<hr>
+	    		</div>
+	    		<div class='card-image hoverable'>
+	    			<a href="#"><img class = 'img-thumbnail' width="200" height="180" src="{% static 'travelAppIMG/canoe.jpg' %}"></a>
+	    			<p>***Location***</p>
+	    			<hr>
+	    		</div>
+		    </div>
+	  	</nav>
 	</div>
 
 </body>

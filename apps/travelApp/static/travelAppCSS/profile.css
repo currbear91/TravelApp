@@ -16,30 +16,71 @@ body{
 	min-height: 990px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	width: 1200px;
-	height: auto;
+	height: auto;	
+}
 
-	
+.logotop{
+	/*margin: 0 auto;*/
+	background-size: contain;
+	position:;
+	display: block;
+	width: 100%;
+	height: 50px;
+	vertical-align: top;
 
 }
 
 nav{
-	background: linear-gradient(#517394, #3f5973,#3f5973,#517394,#517394);
-	height: 
+	background-color:white;
+	height: 100px;
+	color: black;
+	position: relative;
+
+
 	
-	/*border: 1px groove whitesmoke;*/
+	border: 1px groove whitesmoke;
 	padding-left: 10px;
 }
 	.logo{
+		position: absolute;
 		margin-left: 40px;
+		padding-top: 0px;
+		display: inline-block;
+	}
+	.route{
+		color: black;
+		text-align: center;
 	}
 
+	.route:hover{
+		background-color: white;
+		border: 2px solid whitesmoke;
+		border-radius: 15px;
+		text-decoration: none;
+		color: black;
+		
+
+
+
+	}
+	nav ul li{
+		padding-top: 20px;
+	}
 
 .profiledash{
-	width: 100%;
+	width: 70%;
 	display:block;
-	margin-right: 50px;
+	margin: 0 auto;
 	margin-top: 80px;
 	color: black;
+	border: 5px solid rgba(57, 106, 147,.5);
+	border-radius: 15px;
+	padding-left: 50px;
+	background-color: rgba(57, 106, 147,.2);
+	/*text-align: center;*/
+	/*margin-right: px;*/
+
+	
 }
 
 /*	background: linear-gradient( to bottom,rgba(52, 73, 94,.7),rgba(52, 73, 94,.7),rgba(63, 89, 115,.7),rgba(63, 89, 115,.7));
@@ -86,7 +127,7 @@ nav{
 	width: 200px;
 	display: block;
 	padding: ;
-	margin-right: 80px;
+	margin-right: 50px;
 	margin-bottom: 20px;
 	display: inline-block;
 	text-align: center;

@@ -38,18 +38,16 @@
 		
 					</table>
 			</div>
+		{% if messages %}
+		{% for message in messages %}
+		<p{% if message.tags %} class="{{ message.tags }} alert-danger"{% endif %}>{{ message }} </p>
+		{% endfor %}
+		{% endif %}
 		</div>
 				<div class='login'>
 					<input class = 'btn btn-primary homebtn' type="submit" name="enter" value="Log In"></td>
 				</div>
 				</form>
-		{% if messages %}
-		<ul class="messages">
-		{% for message in messages %}
-		<li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }} </li>
-		{% endfor %}
-		</ul>
-		{% endif %}
 	</div>
 
 </body>
