@@ -72,10 +72,18 @@ class PlaceManager(models.Manager):
 
 	def addAct(self):
 		test = []
-		for item in ('hiking', 'swimming', 'skiing', 'museums', 'eating', 'beach', 'family','shopping', 'climbing', 'any', 'sight-seeing'):
+		for item in ('hiking', 'swimming', 'skiing', 'museums', 'eating', 'beach', 'family','shopping', 'any', 'sight-seeing', 'shows', 'park'):
 			test.append(item)
 			if not Activity.objects.filter(name = item):
 				Activity.objects.create(name = item)
+		return test
+
+	def addReg(self):
+		test = []
+		for item in ('Washington', 'Oregon', 'British Columbia'):
+			test.append(item)
+			if not Region.objects.filter(name = item):
+				Region.objects.create(name = item)
 		return test
 
 
@@ -105,19 +113,28 @@ class Season(models.Model):
 	updated_at = models.DateField(auto_now=True)
 	objects = models.Manager()
 
+class Region(models.Model):
+	name = models.CharField(max_length=40)
+	created_at = models.DateField(auto_now_add=True)
+	updated_at = models.DateField(auto_now=True)
+	objects = models.Manager()
+
 
 class Place(models.Model):
 	location = models.CharField(max_length=255)
+	region = models.ForeignKey(Region)
+	description = models.TextField()
+	likes = models.ManyToManyField(User)
 	image = models.ImageField(null = True, upload_to = "media/TravelApp")
 	created_at = models.DateField(auto_now_add = True)
 	updated_at = models.DateField(auto_now = True)
-	travellers = models.ManyToManyField(User)
 	activities = models.ManyToManyField(Activity)
 	season = models.ManyToManyField(Season)
 	placeManager = PlaceManager()
 	objects = models.Manager()
 
 class SeasonPlace(models.Model):
+	region= models.ForeignKey(Region)
 	activity = models.ForeignKey(Activity)
 	season = models.ForeignKey(Season)
 	place = models.ForeignKey(Place)

@@ -1,0 +1,128 @@
+body{
+	background-color: white;
+	/*text-align: center;*/
+	margin: 0 auto;
+	font-family: 'didot'
+}
+
+#container{
+
+	margin: 0 auto;
+	display: block;
+	/*position: fixed;*/
+	background-color: whitesmoke;
+
+
+	min-height: 990px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	width: 1200px;
+	max-width: 100%;
+	height: auto;	
+}
+
+.logotop{
+	/*margin: 0 auto;*/
+	background-size: contain;
+	position:;
+	display: block;
+	width: 100%;
+	height: 50px;
+	vertical-align: top;
+
+}
+
+nav{
+	background-color:white;
+	height: 100px;
+	color: black;
+	position: relative;
+
+
+	
+	border: 1px groove whitesmoke;
+	padding-left: 10px;
+}
+	.logo{
+		position: absolute;
+		margin-left: 40px;
+		padding-top: 0px;
+		display: inline-block;
+	}
+	.route{
+		color: black;
+		text-align: center;
+	}
+
+	.route:hover{
+		background-color: white;
+		border: 2px solid whitesmoke;
+		border-radius: 15px;
+		text-decoration: none;
+		color: black;	
+	}
+	nav ul li{
+		padding-top: 20px;
+	}
+
+	.bold{
+
+		font-weight: bold;
+	}
+
+.profiledash{
+	width: 800px;
+	max-width: 100%;
+	display:block;
+	margin: 0 auto;
+	margin-top: 80px;
+	color: black;
+	border: 5px solid rgba(57, 106, 147,.5);
+	border-radius: 15px;
+	/*padding-left: 50px;*/
+	background-color: rgba(57, 106, 147,.2);
+	/*text-align: center;*/
+	/*margin-right: px;*/
+
+	
+}
+	table{
+
+		max-width: 100%;
+		width: 500px;
+		margin: 0 auto;
+		background-color: transparent;
+	}
+
+	.striped{
+
+		width: 100%;
+		
+	}
+	.results>tr:nth-child(odd){
+	   background-color:black;
+	  
+
+}
+
+/*	background: linear-gradient( to bottom,rgba(52, 73, 94,.7),rgba(52, 73, 94,.7),rgba(63, 89, 115,.7),rgba(63, 89, 115,.7));
+
+	
+}
+
+	/*************BOOTSTRAP START*****************/
+
+
+.
+	/**************BOOTSTRAP END********************/
+
+
+	.boldtd{
+		font-size: 2em;
+		font-weight: bold ;
+		text-align: left;
+}
+.username{
+
+	margin-right: 10px;
+
+}

@@ -9,7 +9,6 @@ body{
 	content: '';
 	/*background-color: whitesmoke;*/
 	background-image: url('../travelAppIMG/baker.jpg');
-	-webkit-filter: blur(1px);
 	margin: 0 auto;
 	display: block;
 	z-index: -1;

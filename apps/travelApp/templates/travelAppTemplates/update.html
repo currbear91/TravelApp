@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>admin</title>
+	<title>update</title>
 </head>
 <body>
-	<h3> This is the admin page </h3>
-	<form action ="{% url 'my_admin_form' %}" enctype="multipart/form-data" method = 'POST'>
+
+<form action="{% url 'my_admin_updatep' update.id %}" method= 'POST'>
 	{% csrf_token %}
 		<p> Title: <input type='text' name='location'></p>
 		<p> Region: </p>
 		<select name = 'region'>
-			{% for x in regions %}
-			<option value ='{{x.id}}'>{{x.name}}</option>
-			{% endfor %}
+			<option value ='1'>Washington</option>
+			<option value='2'>Oregon</option>
+			<option value='3'>British Columbia</option>
 		</select>
 		<p> Season: </p>
 		<select name = 'season'>
@@ -36,42 +36,16 @@
 		<input type="checkbox" name='activity' value="park">park
 		<input type="checkbox" name='activity' value="sight-seeing">sight-seeing
 		<input type="checkbox" name='activity' value="any">any
-		<p> Description:  
+		<p> Upload Picture:  
 
-		<textarea name ='description' col=30 row=30></textarea>
+		<input type="file" name="img" ></p>
 
 
-		<p> <input type='submit' value='submit'></p>
+		<p> <input type='submit' value='update'></p>
 	</form>
-	
-	<table>
-		<tr>
-			<th> Location </th>
-			<th>Description</th>
-			<th> Season </th>
-			<th> Activites </th>
-			<th> Action </th>
-		</tr>
-		{% for item in place %}
-		<tr>
-			<td><p> {{ item.location }} id:{{item.id}}</p></td>
-			<td><p> {{ item.description}}</p></td>
-			<td><p>{% for season in item.season.all %} {{season.name}} , {{season.id}}, {% endfor %}</p></td>
-			<td><p> {% for item in item.activities.all %} {{item.name}}, {{item.id}} {% endfor %}</p></td>
-			<td> <a href = "{% url 'my_admin_delete' item.id %}">Delete </a></td>
-			<td> <a href = "{% url 'my_admin_update' item.id %}">Edit </a></td>	
-		</tr>
-		{% endfor %}
 
-		
-	</table>
-		
-		
-		
-		
-	
-	
-		
+
+</form>
 
 </body>
 </html>

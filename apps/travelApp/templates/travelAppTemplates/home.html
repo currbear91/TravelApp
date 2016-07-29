@@ -34,38 +34,38 @@
 						<h3>Adventure Planner</h3>
 						<hr>
 						<tr>
+						<form action ="{% url 'my_travel_input' %}" method= 'POST'>
+							{% csrf_token %}
 							<td class='boldtd col s12'>Choose Your Adventure:</td>
-							<td><select class = 'browser-default  input-sm '>
+							<td><select class = 'browser-default  input-sm ' name = 'activity1'>
 								{% for item in activities %}
-									<option value ='{{item.name}}' >{{item.name}}</option>
+									<option value ='{{item.name}}'>{{item.name}}</option>
 									{% endfor %}
 								</select>
 							</td>
 						</tr>
 						<tr>
 							<td class='boldtd col s12 m7 l4'>In:</td>
-							<td><select class = 'browser-default input-sm'>
-									<option>Seattle</option>
-									<option>Portland</option>
-									<option>Forks</option>
+							<td><select class = 'browser-default input-sm' name= 'region1'>
+							{% for item in regions %}
+									<option value= '{{item.name}}'> {{item.name}}</option>
+									{% endfor %}
 								</select>
 							</td>
 						</tr>
 						<tr>
 							<td class='boldtd col s12'>During</td>
-							<td><select class = 'browser-default input-sm'>
+							<td><select class = 'browser-default input-sm' name = 'season1'>
 								{% for item in seasons %}
 								<option value ='{{item.name}}' >{{item.name}}</option>
 								{% endfor %}
 								</select>
-				
-								</select>
 							</td>
 						</tr>
 						<tr>
-							<td></td>
 							<td><input class = 'btn btn-default' type="submit" name="submit_trip" value="Find Your Adventure"></td>
 						</tr>
+					</form>
 
 					</table>	
 				</div>

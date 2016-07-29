@@ -17,5 +17,9 @@ urlpatterns = [
     url(r'^finder/$', views.finderResults, name = 'my_travel_finder'),
     url(r'^destination/$', views.destinationResults, name = 'my_travel_destination'),
     url(r'^delete/(?P<id>\d+)$', views.delete, name = 'my_admin_delete'),
+    url(r'^travelprocess$', views.travelprocess, name = 'my_travel_input'),
+    url(r'^aupdate/(?P<id>\d+)$', views.update, name = 'my_admin_update'),
+    url(r'^aupdatep/(?P<id>\d+)$', views.updateprocess, name = 'my_admin_updatep'),
+
 ]
 

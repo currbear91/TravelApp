@@ -26,22 +26,33 @@
 		    	<table class ='striped responsive-table'>
 		    		<thead>
 		    		<tr>
-			    		<th>Place</th>
+			    		<th>Location</th>
+			    		<th>Season</th>
 			    		<th>Activities</th>
 			    	</tr>
 			    	</thead>
-			    		{% for item in blue %}
-					<tr>	
-						<td><a href="{% url 'my_travel_trip'  %}">{{item.0}}</a></td>
-					
-						<td> 	{% for y in item.4 %}{{y}}  {% endfor %} </td>
-						
-						{% endfor %}
-					</tr>	
+			    	
+			    	<tr class = 'results'>
+			    		<td>Washington</td>
+			    		<td>Summer</td>
+			    		<td>Raging Balls</td>
+			    	</tr>
+			    	<tr class = 'results'>
+			    		<td>Washington</td>
+			    		<td>Summer</td>
+			    		<td>Raging Balls</td>
+			    	</tr>
+			    	<tr class = 'results'>
+			    		<td>Washington</td>
+			    		<td>Summer</td>
+			    		<td>Raging Balls</td>
+			    	</tr>
+			    	
 		    	</table>
 		    
 		    </div>
 	  
 	</div>
+
 </body>
 </html>
