@@ -109,7 +109,6 @@ def home(request):
 		'activities': Activity.objects.all(),
 	}
 
-
 	if 'id' not in request.session:
 		return redirect(reverse('my_travel_index'))
 
